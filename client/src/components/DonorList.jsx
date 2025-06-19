@@ -13,13 +13,13 @@ function DonorList() {
     const fetchDonors = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get('http://localhost:8080/api/donors', {
+        const res = await axios.get('https://bloodlink-ai-x4qs.vercel.app/api/donors', {
           headers: { Authorization: `Bearer ${token}` }
         });
-        console.log("Donor response:", res.data); // 🔍 Add this
+        console.log("Donor response:", res.data); 
         setDonors(res.data);
       } catch (err) {
-        console.error("Fetch error:", err.response?.data || err.message); // 🔍 Add this
+        console.error("Fetch error:", err.response?.data || err.message); 
         alert('Error fetching donors');
       }
     };

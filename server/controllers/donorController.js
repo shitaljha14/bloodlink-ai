@@ -60,14 +60,16 @@ const acceptBloodRequest = async (req, res) => {
     request.acceptedBy = donorId;
     await request.save();
     await User.findByIdAndUpdate(donorId, { isAvailable: false });
-
-    await sendEmail(
-      request.user.email,
-      "Blood Request Accepted - BloodLink AI",
-      `Hi ${request.user.name},\n\nYour request for blood has been accepted by a donor. They will contact you shortly.\n\nThanks,\nTeam BloodLink AI`
-    );
+    try {
+      await sendEmail(
+        request.user.email,
+        "Blood Request Accepted - BloodLink AI",
+        `Hi ${request.user.name},\n\nYour request for blood has been accepted by a donor. They will contact you shortly.\n\nThanks,\nTeam BloodLink AI`
+      );
+    } catch (emailErr) {
+      console.error("Email failed:", emailErr.message);
+    }
     
-
     res.json({ message: "Request accepted and receiver notified via email." });
   } catch (error) {
     console.error("Error accepting request:", error);

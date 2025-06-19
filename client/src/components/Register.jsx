@@ -32,7 +32,7 @@ function Register() {
     Object.entries(formData).forEach(([key, value]) => data.append(key, value));
     if (photo) data.append('photo', photo);
     try {
-      await axios.post('http://localhost:8080/api/auth/register', data, {
+      await axios.post('https://bloodlink-ai-x4qs.vercel.app/api/auth/register', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }
@@ -72,7 +72,13 @@ function Register() {
 
       <label>Blood Group:</label>
 {formData.role === 'donor' ? (
-  <select name="bloodGroup" value={formData.bloodGroup} onChange={handleChange} required>
+  <select
+    name="bloodGroup"
+    value={formData.bloodGroup}
+    onChange={handleChange}
+    required
+    className="input-field"
+  >
     <option value="">Select Blood Group</option>
     <option value="A+">A+</option>
     <option value="A-">A-</option>
@@ -90,6 +96,7 @@ function Register() {
     onChange={handleChange}
     required
     placeholder="Enter blood group"
+    className="input-field"
   />
 )}
 

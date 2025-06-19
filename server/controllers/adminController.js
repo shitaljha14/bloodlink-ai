@@ -1,7 +1,6 @@
 const User = require("../models/user");
 const BloodRequest = require("../models/BloodRequest");
 
-// Get Admin Dashboard Stats
 const getAdminStats = async (req, res) => {
   try {
     const totalUsers = await User.countDocuments();
@@ -19,7 +18,6 @@ const getAdminStats = async (req, res) => {
   }
 };
 
-// Get All Users (without password)
 const getAllUsers = async (req, res) => {
   try {
     const users = await User.find().select("-password");
@@ -30,7 +28,6 @@ const getAllUsers = async (req, res) => {
   }
 };
 
-// Update User Role (dummy for now)
 const updateUserRole = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -49,7 +46,7 @@ const updateUserRole = async (req, res) => {
   }
 };
 
-// Delete User
+
 const deleteUser = async (req, res) => {
   try {
     const userId = req.params.id;
@@ -62,7 +59,7 @@ const deleteUser = async (req, res) => {
     console.error("Error deleting user:", error.message);
     res.status(500).json({ message: "Error deleting user" });
   }
-};// Fulfill a Blood Request
+};
 const fulfillRequest = async (req, res) => {
   try {
     const requestId = req.params.id;
@@ -80,7 +77,7 @@ const fulfillRequest = async (req, res) => {
   }
 };
 
-// Delete a Blood Request
+
 const deleteRequest = async (req, res) => {
   try {
     const requestId = req.params.id;

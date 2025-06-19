@@ -18,7 +18,6 @@ const {
 } = require("../controllers/donorController");
 router.get("/", authMiddleware, authorizeRoles("admin"), getDonors);
 
-// Donor only routes
 router.use(authMiddleware, authorizeRoles("donor"));
 
 router.get("/requests/pending", getPendingRequests);
@@ -29,10 +28,10 @@ router.get("/history", getDonationHistory);
 
 router.put("/requests/:id/accept", acceptRequest);
 router.put("/requests/:id/reject", rejectRequest);
-router.post("/accept-request/:id", acceptBloodRequest); // from matching list
+router.post("/accept-request/:id", acceptBloodRequest); 
 
 router.put("/update-availability", updateAvailability);
 router.put("/toggle-availability", toggleAvailability);
-// Only this route is for admin, so separate it
+
 
 module.exports = router;

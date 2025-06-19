@@ -1,6 +1,6 @@
 const BloodRequest = require("../models/BloodRequest");
 
-// ✅ Create a new blood request
+
 exports.createRequest = async (req, res) => {
   try {
     console.log("Request body:", req.body); // Debug line
@@ -25,8 +25,6 @@ exports.createRequest = async (req, res) => {
   }
 };
 
-
-// ✅ Get all blood requests (Admin or Donor view)
 exports.getAllRequests = async (req, res) => {
   try {
     const requests = await BloodRequest.find()

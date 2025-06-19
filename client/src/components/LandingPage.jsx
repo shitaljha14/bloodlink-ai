@@ -1,7 +1,7 @@
 // src/components/LandingPage.jsx
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/landingPage.css'; // Optional: for custom styling
+import '../styles/landingPage.css'; 
 
 function LandingPage() {
   const navigate = useNavigate();

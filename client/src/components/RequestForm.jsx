@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import '../styles/RequestForm.css'; // ✅ Make sure path is correct
+import '../styles/RequestForm.css'; 
 
 function RequestForm() {
   const [form, setForm] = useState({
@@ -21,7 +21,7 @@ function RequestForm() {
 
     try {
       const res = await axios.post(
-        'http://localhost:8080/api/blood-requests',
+        'https://bloodlink-ai-x4qs.vercel.app/api/blood-requests',
         form,
         {
           headers: {

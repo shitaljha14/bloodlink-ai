@@ -9,7 +9,7 @@ function ViewBloodRequests() {
   const fetchRequests = async () => {
     const token = localStorage.getItem('token');
     try {
-      const res = await axios.get('http://localhost:8080/api/blood-requests', {
+      const res = await axios.get('https://bloodlink-ai-x4qs.vercel.app/api/blood-requests', {
         headers: { Authorization: `Bearer ${token}` },
       });
       setRequests(res.data);
@@ -24,7 +24,7 @@ function ViewBloodRequests() {
   const handleFulfill = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.put(`http://localhost:8080/api/admin/requests/${id}/fulfill`, {}, {
+      await axios.put(`https://bloodlink-ai-x4qs.vercel.app/admin/requests/${id}/fulfill`, {}, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Marked as fulfilled');
@@ -37,7 +37,7 @@ function ViewBloodRequests() {
   const handleDelete = async (id) => {
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`http://localhost:8080/api/admin/requests/${id}`, {
+      await axios.delete(`https://bloodlink-ai-x4qs.vercel.app/admin/requests/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Deleted successfully');

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/login.css'; // ensure you create this file
+import '../styles/login.css'; 
 import loginImg from '../assets/bg.jpg';
 
 function Login() {
@@ -17,7 +17,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        'http://localhost:8080/api/auth/login',
+        'https://bloodlink-ai-x4qs.vercel.app/api/auth/login',
         formData,
         { headers: { 'Content-Type': 'application/json' } }
       );
