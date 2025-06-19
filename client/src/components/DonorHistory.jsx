@@ -9,7 +9,7 @@ function DonorHistory() {
     const fetchDonationHistory = async () => {
       const token = localStorage.getItem("token");
       try {
-        const res = await axios.get("https://bloodlink-ai-x4qs.vercel.app/api/donors/history", {
+        const res = await axios.get("https://bloodlink-ai.onrender.com/api/donors/history", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

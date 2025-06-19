@@ -17,7 +17,7 @@ function Login() {
 
     try {
       const res = await axios.post(
-        'https://bloodlink-ai-x4qs.vercel.app/api/auth/login',
+        'https://bloodlink-ai.onrender.com/api/auth/login',
         formData,
         { headers: { 'Content-Type': 'application/json' } }
       );

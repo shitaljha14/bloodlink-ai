@@ -18,7 +18,7 @@ const AdminDashboard = () => {
     const fetchStats = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("https://bloodlink-ai-x4qs.vercel.app/api/admin/stats", {
+        const response = await axios.get("https://bloodlink-ai.onrender.com/api/admin/stats", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

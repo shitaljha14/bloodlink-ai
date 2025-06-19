@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import '../styles/Updatesprofile.css'; // ✅ Import the CSS
+import '../styles/Updatesprofile.css';
 
 function UpdateProfile() {
   const [formData, setFormData] = useState({
@@ -16,7 +16,7 @@ function UpdateProfile() {
     const fetchUser = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get('https://bloodlink-ai-x4qs.vercel.app/api/users/me', {
+        const res = await axios.get('https://bloodlink-ai.onrender.com/api/users/me', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setFormData({
@@ -50,7 +50,7 @@ function UpdateProfile() {
       data.append("photo", photo);
     }
     try {
-      await axios.put('https://bloodlink-ai-x4qs.vercel.app/api/users/update', formData, {
+      await axios.put('https://bloodlink-ai.onrender.com/api/users/update', formData, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert('Profile updated successfully!');

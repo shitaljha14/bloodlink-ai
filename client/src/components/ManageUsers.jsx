@@ -7,7 +7,7 @@ function ManageUsers() {
   const fetchUsers = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:8080/api/admin/users", {
+      const res = await axios.get("https://bloodlink-ai.onrender.com/api/admin/users", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setUsers(res.data);
@@ -21,7 +21,7 @@ function ManageUsers() {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:8080/api/admin/users/${id}`, {
+      await axios.delete(`https://bloodlink-ai.onrender.com/api/admin/users/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("User deleted!");
@@ -35,7 +35,7 @@ function ManageUsers() {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:8080/api/admin/users/${id}/role`,
+        `https://bloodlink-ai.onrender.com/api/admin/users/${id}/role`,
         { role: newRole },
         {
           headers: { Authorization: `Bearer ${token}` },

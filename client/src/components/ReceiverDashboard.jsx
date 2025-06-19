@@ -10,7 +10,7 @@ function ReceiverDashboard() {
     const fetchReceiverProfile = async () => {
       const token = localStorage.getItem('token');
       try {
-        const response = await axios.get("https://bloodlink-ai-x4qs.vercel.app/api/auth/me", {
+        const response = await axios.get("https://bloodlink-ai.onrender.com/api/auth/me", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUser(response.data);
@@ -26,7 +26,7 @@ function ReceiverDashboard() {
     const fetchMyRequests = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get("https://bloodlink-ai-x4qs.vercel.app/api/blood-requests/my", {
+        const res = await axios.get("https://bloodlink-ai.onrender.com/api/blood-requests/my", {
           headers: { Authorization: `Bearer ${token}` },
         });
         setRequests(res.data);

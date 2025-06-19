@@ -32,7 +32,7 @@ function Register() {
     Object.entries(formData).forEach(([key, value]) => data.append(key, value));
     if (photo) data.append('photo', photo);
     try {
-      await axios.post('https://bloodlink-ai-x4qs.vercel.app/api/auth/register', data, {
+      await axios.post('https://bloodlink-ai.onrender.com/api/auth/register', data, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

@@ -21,7 +21,7 @@ function RequestForm() {
 
     try {
       const res = await axios.post(
-        'https://bloodlink-ai-x4qs.vercel.app/api/blood-requests',
+        'https://bloodlink-ai.onrender.com/api/blood-requests',
         form,
         {
           headers: {

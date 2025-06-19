@@ -16,7 +16,7 @@ const RequestBlood = () => {
     try {
       const token = localStorage.getItem("token");
       const res = await axios.post(
-        "https://bloodlink-ai-x4qs.vercel.app/api/blood-requests",
+        "https://bloodlink-ai.onrender.com/api/blood-requests",
         { bloodGroup, location, urgency },
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -9,7 +9,7 @@ function Profile() {
     const fetchProfile = async () => {
       try {
         const token = localStorage.getItem('token');
-        const res = await axios.get('https://bloodlink-ai-x4qs.vercel.app/api/auth/me', {
+        const res = await axios.get('https://bloodlink-ai.onrender.com/api/auth/me', {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -29,7 +29,7 @@ function Profile() {
       {user.photo && (
         <img
           className="profile-photo"
-          src={`https://bloodlink-ai-x4qs.vercel.app/uploads/${user.photo}`}
+          src={`https://bloodlink-ai.onrender.com/uploads/${user.photo}`}
           alt="Profile"
         />
       )}

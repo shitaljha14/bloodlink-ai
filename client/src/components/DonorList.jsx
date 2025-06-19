@@ -13,7 +13,7 @@ function DonorList() {
     const fetchDonors = async () => {
       const token = localStorage.getItem('token');
       try {
-        const res = await axios.get('https://bloodlink-ai-x4qs.vercel.app/api/donors', {
+        const res = await axios.get('https://bloodlink-ai.onrender.com/api/donors', {
           headers: { Authorization: `Bearer ${token}` }
         });
         console.log("Donor response:", res.data); 
@@ -43,7 +43,7 @@ function DonorList() {
       <div style={{ padding: '20px' }}>
         <h2>Available Donors</h2>
 
-        {/* Filter */}
+       
         <div style={{ marginBottom: '20px' }}>
           <input
             name="bloodGroup"

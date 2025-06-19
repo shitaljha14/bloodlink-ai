@@ -43,7 +43,7 @@ function DonorDashboard() {
   const fetchMatchingRequests = async () => {
     try {
       const res = await axios.get(
-        "https://bloodlink-ai-x4qs.vercel.app/api/donors/matching-requests",
+        "https://bloodlink-ai.onrender.com/api/donors/matching-requests",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -59,7 +59,7 @@ function DonorDashboard() {
   const fetchAcceptedRequests = async () => {
     try {
       const res = await axios.get(
-        "https://bloodlink-ai-x4qs.vercel.app/api/donors/accepted-requests",
+        "https://bloodlink-ai.onrender.com/api/donors/accepted-requests",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
@@ -74,7 +74,7 @@ function DonorDashboard() {
 
   const fetchDonationHistory = async () => {
     try {
-      const res = await axios.get("https://bloodlink-ai-x4qs.vercel.app/donors/history", {
+      const res = await axios.get("https://bloodlink-ai.onrender.com/donors/history", {
         headers: { Authorization: `Bearer ${token}` },
       });
       setDonationHistory(res.data);
@@ -88,7 +88,7 @@ function DonorDashboard() {
   const handleAccept = async (requestId) => {
     try {
       const res = await axios.post(
-        `https://bloodlink-ai-x4qs.vercel.app/api/donors/accept-request/${requestId}`,
+        `https://bloodlink-ai.onrender.com/api/donors/accept-request/${requestId}`,
         {},
         {
           headers: { Authorization: `Bearer ${token}` },
