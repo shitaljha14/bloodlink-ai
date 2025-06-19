@@ -1,25 +1,17 @@
-// server/controllers/userController.js
+const multer = require('multer');
+const path = require('path');
 
-const User = require('../models/User');
-
-const updateProfile = async (req, res) => {
-  try {
-    const userId = req.user.id;
-    const { name, bloodGroup, location } = req.body;
-    const photo = req.file ? req.file.filename : undefined;
-
-    const updatedFields = { name, bloodGroup, location };
-    if (photo) updatedFields.photo = photo;
-
-    const updatedUser = await User.findByIdAndUpdate(userId, updatedFields, { new: true });
-
-    res.status(200).json(updatedUser);
-  } catch (error) {
-    console.error('Profile update failed:', error);
-    res.status(500).json({ message: 'Something went wrong' });
+// Storage config
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/'); // Make sure 'uploads' folder exists
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
   }
-};
+});
 
-module.exports = {
-  updateProfile,
-};
+const upload = multer({ storage });
+
+// Use this middleware in your route
+router.put('/update', upload.single('photo'), updateProfileController);

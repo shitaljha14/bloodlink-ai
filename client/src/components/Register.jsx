@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import '../styles/register.css'; // Optional: add styles here
+import '../styles/register.css'; 
 import axios from 'axios';
 import bloodDonorImg from '../assets/blood.png';
 
