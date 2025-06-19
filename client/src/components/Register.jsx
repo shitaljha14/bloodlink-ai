@@ -71,7 +71,28 @@ function Register() {
       </select>
 
       <label>Blood Group:</label>
-      <input name="bloodGroup" value={formData.bloodGroup} onChange={handleChange} required />
+{formData.role === 'donor' ? (
+  <select name="bloodGroup" value={formData.bloodGroup} onChange={handleChange} required>
+    <option value="">Select Blood Group</option>
+    <option value="A+">A+</option>
+    <option value="A-">A-</option>
+    <option value="B+">B+</option>
+    <option value="B-">B-</option>
+    <option value="AB+">AB+</option>
+    <option value="AB-">AB-</option>
+    <option value="O+">O+</option>
+    <option value="O-">O-</option>
+  </select>
+) : (
+  <input
+    name="bloodGroup"
+    value={formData.bloodGroup}
+    onChange={handleChange}
+    required
+    placeholder="Enter blood group"
+  />
+)}
+
 
       <label>Location:</label>
       <input name="location" value={formData.location} onChange={handleChange} required />
