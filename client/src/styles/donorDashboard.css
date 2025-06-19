@@ -1,0 +1,148 @@
+/* donorDashboard.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffe6e6, #fffafa);
+    /* soft red/pinkish */
+    
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.donor-dashboard-wrapper {
+    display: flex;
+    width: 100vw;
+}
+
+/* Sidebar */
+.donor-sidebar {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    width: 250px;
+    min-height: 100vh;
+    border-right: 2px solid #e0e0e0;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.donor-sidebar h3 {
+    color: #d64545;
+    font-size: 24px;
+    margin-bottom: 1.5rem;
+}
+
+.donor-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.donor-sidebar li {
+    padding: 0.8rem 0;
+    cursor: pointer;
+    color: #444;
+    transition: all 0.3s ease;
+}
+
+.donor-sidebar li:hover {
+    color: #d64545;
+    font-weight: bold;
+}
+
+.toggles button {
+    margin-top: 1rem;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #d64545;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.toggles button:hover {
+    background-color: #b63232;
+}
+
+/* Main content area */
+.donor-main {
+    flex: 1;
+    padding: 2rem;
+    background: url('/blood-donation-bg.jpg') center/cover no-repeat;
+    backdrop-filter: blur(3px);
+    min-height: 100vh;
+}
+
+.donor-main.dark {
+    background: #1e1e1e;
+    color: white;
+}
+
+.request-list {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Card styling */
+.request-card {
+    width:20vw;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.request-card:hover {
+    transform: scale(1.02);
+
+}
+
+.urgency-badge {
+    font-weight: bold;
+    margin-top: 0.8rem;
+}
+
+.urgency-urgent {
+    color: #e60000;
+}
+
+.urgency-normal {
+    color: #ff9900;
+}
+
+.urgency-critical {
+    color: #b30000;
+}
+
+.accept-btn {
+    padding: 10px 16px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.accept-btn:hover {
+    background-color: #1f7a33;
+}
+
+.status-info {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #555;
+}
+.donor-main.dark .request-card {
+    background: rgba(237, 138, 24, 0.85);
+    color: #f0f0f0;
+}
+
+.donor-sidebar.dark {
+    background: rgba(20, 20, 20, 0.85);
+    color: #f0f0f0;
+}

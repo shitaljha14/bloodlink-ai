@@ -1,0 +1,82 @@
+.update-page {
+    width:100vw;
+    min-height: 100vh;
+    background: linear-gradient(to right, #d16ba5, #86a8e7, #5ffbf1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.update-form-box {
+    backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    color: #090909;
+    animation: fadeSlideIn 0.6s ease-in-out;
+}
+
+.update-form-box h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.update-form-box label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.update-form-box input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #18181b;
+    font-weight: 500;
+}
+
+.update-form-box input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.update-form-box input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.update-form-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4e50;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.update-form-box button:hover {
+    background-color: #c92429;
+}
+
+@keyframes fadeSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

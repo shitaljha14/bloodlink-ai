@@ -1,0 +1,52 @@
+.request-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: #fff9f9;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+  
+         
+          
+        
+}
+
+.request-title {
+    font-size: 2rem;
+    color: #b30000;
+    margin-bottom: 25px;
+}
+
+.request-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #002db3;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #990000;
+}
+
+.form-message {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #444;
+}
