@@ -24,7 +24,7 @@ function DonorDashboard() {
   const toggleAvailability = async () => {
     try {
       const response = await axios.put(
-        "https://bloodlink-ai-x4qs.vercel.app/api/donors/toggle-availability",
+        "https://bloodlink-ai.onrender.com/api/donors/toggle-availability",
         {},
         {
           headers: {
