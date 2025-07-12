@@ -50,12 +50,17 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
+   
 }
 
 .login-form-card input {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
+    background-color: white;
+    color:black;
+    
+
 }
 
 .login-form-card button {

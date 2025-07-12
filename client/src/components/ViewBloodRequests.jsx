@@ -82,7 +82,6 @@ function ViewBloodRequests() {
                 <td>{req.urgency}</td>
                 <td>{new Date(req.createdAt).toLocaleString()}</td>
                 <td>{req.status || 'pending'}</td>
-
                 <td>
                   {req.status !== 'fulfilled' && (
                     <button className="btn btn-fulfill" onClick={() => handleFulfill(req._id)}>Fulfill</button>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import "../styles/ManageUsers.css";
 
 function ManageUsers() {
   const [users, setUsers] = useState([]);
@@ -25,7 +26,7 @@ function ManageUsers() {
         headers: { Authorization: `Bearer ${token}` },
       });
       alert("User deleted!");
-      fetchUsers(); // refresh list
+      fetchUsers();
     } catch (err) {
       console.error("Failed to delete user:", err.message);
     }
@@ -53,9 +54,9 @@ function ManageUsers() {
   }, []);
 
   return (
-    <div style={{ padding: "1rem" }}>
+    <div className="manage-users">
       <h2>Manage Users</h2>
-      <table border="1" cellPadding="10">
+      <table>
         <thead>
           <tr>
             <th>Name</th>
@@ -72,19 +73,14 @@ function ManageUsers() {
               <td>{u.email}</td>
               <td>{u.role}</td>
               <td>
-                <select
-                  value={u.role}
-                  onChange={(e) => handleRoleChange(u._id, e.target.value)}
-                >
+                <select value={u.role} onChange={(e) => handleRoleChange(u._id, e.target.value)}>
                   <option value="admin">admin</option>
                   <option value="donor">donor</option>
                   <option value="receiver">receiver</option>
                 </select>
               </td>
               <td>
-                <button onClick={() => handleDelete(u._id)} style={{ color: "red" }}>
-                  Delete
-                </button>
+                <button onClick={() => handleDelete(u._id)}>Delete</button>
               </td>
             </tr>
           ))}

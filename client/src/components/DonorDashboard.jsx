@@ -115,9 +115,9 @@ function DonorDashboard() {
     switch (activeTab) {
       case "requests":
         return loadingMatch ? (
-          <p>Loading matching requests...</p>
+          <p className="shital">Loading matching requests...</p>
         ) : matchingRequests.length === 0 ? (
-          <p>No matching requests found in your area.</p>
+          <p className="shital">No matching requests found in your area.</p>
         ) : (
           <ul className="request-list">
             {matchingRequests.map((req) => (
@@ -128,9 +128,9 @@ function DonorDashboard() {
         );
       case "accepted":
         return loadingAccepted ? (
-          <p>Loading accepted requests...</p>
+          <p className="shital">Loading accepted requests...</p>
         ) : acceptedRequests.length === 0 ? (
-          <p>You haven’t accepted any requests yet.</p>
+          <p className="shital">You haven’t accepted any requests yet.</p>
         ) : (
           <ul className="request-list">
             {acceptedRequests.map((req) => (
@@ -140,9 +140,9 @@ function DonorDashboard() {
         );
       case "history":
         return loadingHistory ? (
-          <p>Loading donation history...</p>
+          <p className="shital">Loading donation history...</p>
         ) : donationHistory.length === 0 ? (
-          <p>No previous donations recorded yet.</p>
+          <p className="shital">No previous donations recorded yet.</p>
         ) : (
           <ul className="request-list">
             {donationHistory.map((req) => (
@@ -167,7 +167,7 @@ function DonorDashboard() {
         <ul>
           <li onClick={() => setActiveTab("requests")}>📥 Matching Requests</li>
           <li onClick={() => setActiveTab("accepted")}>✅ Accepted</li>
-          <li onClick={() => setActiveTab("history")}>📜 History</li>
+         
         </ul>
         <div className="toggles">
           <button onClick={toggleDarkMode} className="dark-toggle">

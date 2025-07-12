@@ -1,0 +1,61 @@
+/* Container for Donor History page */
+.donor-history-container {
+    padding: 20px;
+}
+
+.donor-history-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #c92a2a;
+}
+
+/* Loader or fallback */
+.donor-history-container p {
+    font-size: 1rem;
+    color: #444;
+}
+
+/* List styling */
+.donor-history-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1rem;
+}
+
+/* Each donation card */
+.donor-history-card {
+    border: 1px solid #ddd;
+    border-left: 4px solid #c92a2a;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fdfdfd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.donor-history-card:hover {
+    transform: scale(1.015);
+}
+
+.donor-history-card p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+.donor-history-card strong {
+    color: #333;
+}
+
+/* Optional: dark mode */
+.donor-main.dark .donor-history-card {
+    background: #2a2a2a;
+    color: #f5f5f5;
+    border-color: #ff4d4d;
+}
+
+.donor-main.dark .donor-history-card strong {
+    color: #ffffff;
+}

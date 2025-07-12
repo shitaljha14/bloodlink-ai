@@ -1,27 +1,34 @@
 .manage-users {
-    padding: 1rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.manage-users h2 {
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    background-color: white;
+    color: black;
 }
 
 .manage-users table {
     width: 100%;
+    background-color: white;
+    color: black;
     border-collapse: collapse;
 }
-
+h2 {
+    margin-bottom: 20px;
+    color: #c62828;
+}
 .manage-users th,
 .manage-users td {
-    padding: 0.75rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
+.manage-users select,
+.manage-users button {
+    color: black;
+    background-color: #f2f2f2;
+    border: 1px solid #999;
+    padding: 6px 10px;
+    cursor: pointer;
+}
 .manage-users th {
-    background-color: #f3f4f6;
+    background-color: #c62828;
+    color: white;
+    font-weight: bold;
 }

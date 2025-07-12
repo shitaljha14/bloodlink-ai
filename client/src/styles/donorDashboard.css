@@ -4,7 +4,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(to right, #ffe6e6, #fffafa);
-    /* soft red/pinkish */
+  
     
     min-height: 100vh;
     overflow-x: hidden;
@@ -15,7 +15,7 @@ body {
     width: 100vw;
 }
 
-/* Sidebar */
+
 .donor-sidebar {
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(10px);
@@ -65,7 +65,6 @@ body {
     background-color: #b63232;
 }
 
-/* Main content area */
 .donor-main {
     flex: 1;
     padding: 2rem;
@@ -84,7 +83,7 @@ body {
     gap: 1.5rem;
 }
 
-/* Card styling */
+
 .request-card {
     width:20vw;
     background: rgba(255, 255, 255, 0.9);
@@ -126,8 +125,16 @@ body {
     cursor: pointer;
     margin-top: 1rem;
     font-weight: bold;
+}.shital {
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
 }
 
+/* override for dark mode */
+.donor-main.dark .shital {
+    color: #fff;
+}
 .accept-btn:hover {
     background-color: #1f7a33;
 }
@@ -143,6 +150,6 @@ body {
 }
 
 .donor-sidebar.dark {
-    background: rgba(20, 20, 20, 0.85);
+    background: rgba(93, 89, 89, 0.85);
     color: #f0f0f0;
 }

@@ -13,7 +13,7 @@
     padding: 40px;
     background: #fff5f5;
     border-radius: 12px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px white;
     margin: 40px;
 }
 
@@ -25,10 +25,12 @@
 .register-left form {
     display: flex;
     flex-direction: column;
+    
 }
 
 .register-left label {
     margin: 8px 0 4px;
+    color:black;
 }
 
 .register-left input,
@@ -36,6 +38,11 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 6px;
+}
+.register-wrapper input,
+.register-wrapper select {
+    background-color: white;
+    color: black;
 }
 
 .register-left button {
@@ -77,7 +84,7 @@
     margin-top: 5px;
     margin-bottom: 15px;
     background-color: white;
-    color: #333;
+    color:rgb(13, 13, 13);
     appearance: none;
 }
 
@@ -102,3 +109,13 @@
         border-radius: 8px;
     }
 }
+/* Autofill fix for Chrome
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    box-shadow: 0 0 0 1000px white inset !important;
+    -webkit-text-fill-color: black !important;
+    transition: background-color 5000s ease-in-out 0s;
+} */
